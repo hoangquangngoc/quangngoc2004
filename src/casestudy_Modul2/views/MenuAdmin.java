@@ -2,6 +2,7 @@ package casestudy_Modul2.views;
 
 import casestudy_Modul2.Managers.ManagerAdmin;
 import casestudy_Modul2.Managers.ManagerProduct;
+import casestudy_Modul2.Managers.ManagerUser;
 import casestudy_Modul2.Models.Product;
 
 import java.util.Scanner;
@@ -11,6 +12,7 @@ public class MenuAdmin {
     Scanner sc = new Scanner(System.in);
     ManagerAdmin managerAccount = new ManagerAdmin();
     ManagerProduct managerProduct = new ManagerProduct();
+    ManagerUser managerUser = new ManagerUser();
     public void menuAdmin(){
         while (true) {
             System.out.println();
@@ -49,12 +51,14 @@ public class MenuAdmin {
                             System.out.println("║>[3]. Sửa Sản Phẩm                                 ║");
                             System.out.println("║>[4]. Tìm kiếm Sản Phẩm                            ║");
                             System.out.println("║>[5]. Xóa sản phẩm                                 ║");
-                            System.out.println("║>[6]. Thoát                                        ║");
+                            System.out.println("║>[6]. Hiển thị danh sách khách hàng                ║");
+                            System.out.println("║>[7]. Xóa tài khoản khách hàng                     ║");
+                            System.out.println("║>[8]. Thoát                                        ║");
                             System.out.println("╚===================================================╝");
                             System.out.println("Nhập lựa chọn:");
                             try {
                                 int choice1 = Integer.parseInt(sc.nextLine());
-                                if (choice1 < 0 || choice1 > 6) {
+                                if (choice1 < 0 || choice1 > 8) {
                                     System.out.println();
                                     System.out.println("⛔ Lựa chọn không tồn tại, mời bạn nhập lại !!!");
                                 }
@@ -77,6 +81,12 @@ public class MenuAdmin {
                                         managerProduct.deleteProduct();
                                         break;
                                     case 6:
+                                       managerUser.showUserClient();
+                                       break;
+                                    case 7:
+                                        managerUser.removeClient();
+                                        break;
+                                    case 8:
                                         return;
                                 }
                             } catch (Exception e) {

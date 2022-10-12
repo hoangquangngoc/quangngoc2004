@@ -164,6 +164,21 @@ public class ManagerUser {
             System.out.println(giohang.get(i));
         }
     }
+    public void showUserClient(){
+        for (int i = 0; i < accountUsers.size(); i++) {
+            System.out.println(accountUsers.get(i));
+
+        }
+    }
+    public void removeClient(){
+        System.out.println("Nhập tài khoản khách hàng muốn xóa");
+        String username = sc.nextLine();
+        for (int i = 0; i <accountUsers.size() ; i++) {
+            if (accountUsers.get(i).getUsername().equals(username)){
+                accountUsers.remove(accountUsers.get(i));
+            }
+        }
+    }
 
 
 }
