@@ -9,6 +9,7 @@ import casestudy_Modul2.views.MenuUser;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -24,9 +25,9 @@ public class ManagerUser {
     Scanner sc = new Scanner(System.in);
     ManagerProduct managerProduct = new ManagerProduct();
 
-    MenuUser menuUser;
+    MenuUser menuUser = new MenuUser();
     ValidateUser validateUser;
-    public void login() {
+    public boolean login() {
         try {
             System.out.println("Nhập username");
             String username = sc.nextLine();
@@ -34,7 +35,7 @@ public class ManagerUser {
             String password = sc.nextLine();
             for (int i = 0; i < accountUsers.size(); i++) {
                 if (accountUsers.get(i).getUsername().equals(username) && accountUsers.get(i).getPassword().equals(password)) {
-                    menuUser.menuUser();
+                   return true;
                 }
 
             }
@@ -42,6 +43,7 @@ public class ManagerUser {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return false;
     }
     public void register(){
         System.out.println("Nhập tên user");
@@ -63,9 +65,8 @@ public class ManagerUser {
         }
         System.out.println("Nhập password");
         String password = ValidateUser.password();
-        System.out.println("Nhập role");
-        String role = sc.nextLine();
-        accountUsers.add(new AccountUser(name,age,telephone,email,username,password,role,giohang));
+
+        accountUsers.add(new AccountUser(name,age,telephone,email,username,password,giohang));
         readAndWrite.write(file,accountUsers);
     }
 
@@ -76,6 +77,30 @@ public class ManagerUser {
             }
         }
         return true;
+    }
+    public  void forgotpassword(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("---------------------");
+        System.out.println("Nhập email");
+        String email = scanner.nextLine();
+        boolean check = true;
+        for (int i = 0; i < accountUsers.size(); i++) {
+            if (accountUsers.get(i).getEmail().equals(email)) {
+                System.out.println("");
+                System.out.println("   Tài khoản bạn cần tìm là : ");
+                System.out.println("----------------------------------");
+                System.out.println("Account  : "+ readAndWrite.read(file).get(i).getUsername());
+                System.out.println("Password : "+ readAndWrite.read(file).get(i).getPassword());
+                System.out.println("----------------------------------");
+                check=false;
+            }
+
+        }
+        if (check==true) {
+            System.out.println("-----------------------------------------");
+            System.out.println("     Không tìm thấy tài khoản bạn cần tìm ");
+        }
+      login();
     }
     public void buyProduct(){
         System.out.println("Nhập tên sản phẩm muốn thêm vào giỏ hàng");
@@ -92,9 +117,10 @@ public class ManagerUser {
     public void removeProduct(){
         System.out.println("Nhập tên sản phẩm muốn xóa khỏi giỏ hàng");
         String nameCaterory= sc.nextLine();
-        for (int i = 0; i < managerProduct.products.size(); i++) {
-            if(managerProduct.products.get(i).getNameCaterory().equals(nameCaterory)){
-                giohang.remove(managerProduct.products.get(i));
+
+        for (int i = 0; i <giohang.size(); i++) {
+            if(giohang.get(i).getNameCaterory().equals(nameCaterory)){
+                giohang.remove(giohang.get(i));
 
             }
 
@@ -127,5 +153,17 @@ public class ManagerUser {
         }
         return tongTien;
     }
+    public void sort(){
+        giohang.sort(new Comparator<Product>() {
+            @Override
+            public int compare(Product o1, Product o2) {
+                return (int) (o1.getPrice() - o2.getPrice());
+            }
+        });
+        for (int i = 0;i< giohang.size();i++){
+            System.out.println(giohang.get(i));
+        }
+    }
+
 
 }

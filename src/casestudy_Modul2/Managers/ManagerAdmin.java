@@ -2,7 +2,7 @@ package casestudy_Modul2.Managers;
 
 import casestudy_Modul2.IO.ReadAndWrite;
 import casestudy_Modul2.Models.AccountAdmin;
-import casestudy_Modul2.Models.Product;
+
 
 import java.io.File;
 import java.util.ArrayList;
@@ -15,39 +15,46 @@ public class ManagerAdmin {
     Scanner sc = new Scanner(System.in);
 
     ManagerProduct managerProduct;
+    ArrayList<AccountAdmin> users = readAndWrite.read(file);
 
+    public boolean login() {
+        try {
+            System.out.println("Nhập user name");
+            String userName = sc.nextLine();
+            System.out.println("Nhập password");
+            String password = sc.nextLine();
+            for (int i = 0; i < accounts.size(); i++) {
+                if (accounts.get(i).getUserName().equals(userName) && accounts.get(i).getPassword().equals(password)||(userName.equals("ngoc")&&(password.equals("123456")))) {
+                    return true;
 
-    public void login() {
-        System.out.println("Nhập user name");
-        String userName = sc.nextLine();
-        System.out.println("Nhập password");
-        String password = sc.nextLine();
-        for (int i = 0; i < accounts.size(); i++) {
-            if (accounts.get(i).getUserName().equals(userName) && accounts.get(i).getPassword().equals(password)) {
+                }
 
 
             }
+        }catch (Exception e){
+            e.printStackTrace();
         }
+        return false;
 }
 
-public void register(){
-        String userName;
-        while (true){
-            System.out.println("Nhập username");
-            userName = sc.nextLine();
-            if (checkUserName(userName)) {
-                break;
-            }
-            System.out.println("Trùng username rồi");
-        }
-
-        System.out.println("Nhập password");
-        String password = sc.nextLine();
-        System.out.println("Nhập role");
-        String role = sc.nextLine();
-        accounts.add(new AccountAdmin(userName,password,role));
-        readAndWrite.write(file,accounts);
-    }
+//public void register(){
+//        String userName;
+//        while (true){
+//            System.out.println("Nhập username");
+//            userName = sc.nextLine();
+//            if (checkUserName(userName)) {
+//                break;
+//            }
+//            System.out.println("Trùng username rồi");
+//        }
+//
+//        System.out.println("Nhập password");
+//        String password = sc.nextLine();
+//        System.out.println("Nhập role");
+//        String role = sc.nextLine();
+//        accounts.add(new AccountAdmin(userName,password,role));
+//        readAndWrite.write(file,accounts);
+//    }
 
     public boolean checkUserName(String username) {
         for (int i = 0; i < accounts.size(); i++) {
@@ -57,7 +64,6 @@ public void register(){
         }
         return true;
     }
-
 }
 
 

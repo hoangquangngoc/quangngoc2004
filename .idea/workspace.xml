@@ -5,32 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b7723c9-3681-4489-a0e7-b12aed4901a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/File_text/account.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/File_text/giohang.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/File_text/product.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/File_text/user.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/IO/ReadAndWrite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Models/AccountAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Models/AccountUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Validate/ValidateUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/views/MenuAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/views/MenuUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Validate/ValidateAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casestudy_Modul2/Models/AccountUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Models/AccountUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casestudy_Modul2/Validate/ValidateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Validate/ValidateUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casestudy_Modul2/views/MenuAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casestudy_Modul2/views/MenuAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casestudy_Modul2/views/MenuUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casestudy_Modul2/views/MenuUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,20 +39,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/intellij/demo/Case/src",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/intellij/demo/Case&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\intellij\demo\Case\src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="casestudy_Modul2.Main" />
+      <module name="Case" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="casestudy_Modul2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -80,5 +95,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Case$Main.ic" NAME="Main Coverage Results" MODIFIED="1665541821672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>casestudy_Modul2.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -9,7 +9,7 @@ public class ValidateUser {
  public static final String regexage = "[0-9]{1,2}";
  public static final String regextelephone = "[+84][0-9]{11}";
  public static final String regexemail = "^[a-zA-Z]+[0-9_a-zA-z.]*@([a-z]+\\.[a-z]+)+";
- public static final String regexusername = "[A-Z][a-z]{1,9}[0-9]{1,9}";
+ public static final String regexusername = "[a-z0-9]{1,9}";
  public static final String regexpassword = "[A-Za-z0-9]+";
 
  static Scanner sc = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class ValidateUser {
    if (matcher.matches()){
     return Name;
    }
-   System.out.println("Nhập sai định dạng rồi ,nhập lại đi");
+   System.out.println("Nhập sai định dạng rồi ,nhập lại đi(bắt đầu bằng chữ hoa)");
   }
  }
  public static String age(){
@@ -33,7 +33,7 @@ public class ValidateUser {
    if (matcher.matches()){
     return Age;
    }
-   System.out.println("Nhập sai định dạng rồi ,nhập lại đi");
+   System.out.println("Nhập sai định dạng rồi ,nhập lại đi(phải nhập bằng chữ số)");
   }
  }
  public static String telephone(){
@@ -45,7 +45,7 @@ public class ValidateUser {
     return Telephone;
 
    }
-   System.out.println("Nhập sai định dạng rồi ,nhập lại đi");
+   System.out.println("Nhập sai định dạng rồi ,nhập lại đi(bắt đầu với +84)");
   }
  }
  public static String email(){
@@ -56,7 +56,7 @@ public class ValidateUser {
    if (matcher.matches()){
     return Email;
    }
-   System.out.println("Nhập sai định dạng rồi ,nhập lại đi");
+   System.out.println("Nhập sai định dạng rồi ,nhập lại đi (abc123@gmail.com)");
   }
  }
  public static String username(){
@@ -67,7 +67,7 @@ public class ValidateUser {
    if(matcher.matches()){
     return Username;
    }
-   System.out.println("Nhập sai định dạng rồi ,nhập lại đi");
+   System.out.println("Nhập sai định dạng rồi ,nhập lại đi(tên tài khoản phải có đầy đủ cả chữ và số)");
   }
  }
 

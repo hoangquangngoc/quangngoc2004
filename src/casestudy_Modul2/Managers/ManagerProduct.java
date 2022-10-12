@@ -74,6 +74,7 @@ public class ManagerProduct {
     }
     public void deleteProduct(){
         System.out.println("Nhập id sản phẩm muốn xóa");
+        System.out.println("Bạn có chắc chắn muốn xóa san phẩm này không");
         int idProduct = Integer.parseInt(sc.nextLine());
         for (int i = 0; i <products.size() ; i++) {
             if (products.get(i).getIdProduct() == idProduct){
@@ -81,5 +82,18 @@ public class ManagerProduct {
             }
 
         }
+    }
+    public void search(){
+        System.out.println("Nhập tên sản phẩm muốn tìm kiếm");
+        String nameCaterory = sc.nextLine();
+        for (int i = 0; i < products.size(); i++) {
+           if (products.get(i).getNameCaterory().equals(nameCaterory)){
+               System.out.println(products.get(i));
+
+            }
+
+        }
+
+
     }
 }

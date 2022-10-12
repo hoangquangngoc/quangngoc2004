@@ -20,7 +20,7 @@ public class MenuAdmin {
             System.out.println("║         ▂ ▃ ▅ ▆ █ XIN CHÀO ADMIN █ ▆ ▅ ▃ ▂        ║");
             System.out.println("╠===================================================╣");
             System.out.println("║>[1]. Đăng nhập                                    ║");
-            System.out.println("║>[2]. Đăng ký                                      ║");
+//            System.out.println("║>[2]. Đăng ký                                      ║");
             System.out.println("║>[0]. Thoát                                        ║");
             System.out.println("╚===================================================╝");
             System.out.println("Nhập lựa chọn:");
@@ -29,13 +29,17 @@ public class MenuAdmin {
                 int choice = Integer.parseInt(sc.nextLine());
                 if (choice < 0 || choice > 2) {
                     System.out.println();
-                    System.out.println("⛔ Lựa chọn không tồn tại, mời bạn nhập lại !!!");
+                    System.err.println("⛔ Lựa chọn không tồn tại, mời bạn nhập lại !!!");
                 }
                 switch (choice) {
                     case 1:
-                        managerAccount.login();
-                        System.out.println("Đăng Nhập thành công");
-
+                        if (managerAccount.login()) {
+                            System.out.println("Đăng Nhập thành công");
+                        }
+                        else {
+                            System.out.println("Không có taì khoản!");
+                            return;
+                        }
                         while (true) {
                             System.out.println("╔===================================================╗");
                             System.out.println("║         ▂ ▃ ▅ ▆ █ QUẢN LÝ SẢN PHẨM █ ▆ ▅ ▃ ▂      ║");
@@ -67,7 +71,8 @@ public class MenuAdmin {
                                         managerProduct.edit();
                                         break;
                                     case 4:
-                                        managerProduct.findIndexById(1);
+                                        managerProduct.search();
+                                        break;
                                     case 5:
                                         managerProduct.deleteProduct();
                                         break;
@@ -81,12 +86,11 @@ public class MenuAdmin {
 
                         }
 
-                    case 2:
-                        managerAccount.register();
-                        break;
+//                    case 2:
+//                        managerAccount.register();
+//                        break;
                     case 0:
-                        System.exit(0);
-                        break;
+                        return;
                 }
 
             } catch (Exception e) {

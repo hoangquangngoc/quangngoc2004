@@ -10,21 +10,21 @@ public class AccountUser implements Serializable {
     private String email;
     private String username;
     private String password;
-    private String role;
+//    private String role;
     private ArrayList<Product>giohang;
 
 
     public AccountUser() {
     }
 
-    public AccountUser(String name, String age, String telephone, String email, String username, String password, String role, ArrayList<Product> giohang) {
+    public AccountUser(String name, String age, String telephone, String email, String username, String password,  ArrayList<Product> giohang) {
         this.name = name;
         this.age = age;
         this.telephone = telephone;
         this.email = email;
         this.username = username;
         this.password = password;
-        this.role = role;
+//        this.role = role;
         this.giohang = giohang;
     }
 
@@ -77,13 +77,7 @@ public class AccountUser implements Serializable {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
-    }
 
-    public void setRole(String role) {
-        this.role = role;
-    }
 
     public ArrayList<Product> getGiohang() {
         return giohang;
@@ -95,15 +89,13 @@ public class AccountUser implements Serializable {
 
     @Override
     public String toString() {
-        return "AccountUser{" +
+        return
                 "name='" + name + '\'' +
                 ", age='" + age + '\'' +
                 ", telephone='" + telephone + '\'' +
                 ", email='" + email + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", role='" + role + '\'' +
-                ", giohang=" + giohang +
-                '}';
+                ", giohang=" + giohang ;
     }
 }
