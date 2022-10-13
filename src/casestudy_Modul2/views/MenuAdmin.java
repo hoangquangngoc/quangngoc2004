@@ -22,7 +22,6 @@ public class MenuAdmin {
             System.out.println("║         ▂ ▃ ▅ ▆ █ XIN CHÀO ADMIN █ ▆ ▅ ▃ ▂        ║");
             System.out.println("╠===================================================╣");
             System.out.println("║>[1]. Đăng nhập                                    ║");
-//            System.out.println("║>[2]. Đăng ký                                      ║");
             System.out.println("║>[0]. Thoát                                        ║");
             System.out.println("╚===================================================╝");
             System.out.println("Nhập lựa chọn:");

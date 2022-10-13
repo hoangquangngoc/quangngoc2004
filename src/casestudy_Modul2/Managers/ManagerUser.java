@@ -25,6 +25,7 @@ public class ManagerUser {
     Scanner sc = new Scanner(System.in);
     ManagerProduct managerProduct = new ManagerProduct();
 
+
     MenuUser menuUser = new MenuUser();
     ValidateUser validateUser;
     public boolean login() {
@@ -108,6 +109,7 @@ public class ManagerUser {
         for (int i = 0; i < managerProduct.products.size(); i++) {
             if(managerProduct.products.get(i).getNameCaterory().equals(nameCaterory)){
                 giohang.add(managerProduct.products.get(i));
+                System.out.println("Thêm sản phẩm thành công");
             }
 
         }
@@ -121,6 +123,7 @@ public class ManagerUser {
         for (int i = 0; i <giohang.size(); i++) {
             if(giohang.get(i).getNameCaterory().equals(nameCaterory)){
                 giohang.remove(giohang.get(i));
+                System.out.println("Xóa sản phẩm thành công");
 
             }
 
@@ -170,15 +173,22 @@ public class ManagerUser {
 
         }
     }
-    public void removeClient(){
+    public void removeClient() {
         System.out.println("Nhập tài khoản khách hàng muốn xóa");
         String username = sc.nextLine();
-        for (int i = 0; i <accountUsers.size() ; i++) {
-            if (accountUsers.get(i).getUsername().equals(username)){
-                accountUsers.remove(accountUsers.get(i));
+        for (int i = 0; i < accountUsers.size(); i++) {
+            if (accountUsers.get(i).getUsername().equals(username)) {
+                System.out.println("Bạn có muốn xóa sản phẩm này không ?(Nhấn y để xóa)");
+                String check = sc.nextLine();
+                if (check.equals("y") || check.equals("Y")) {
+                    accountUsers.remove(accountUsers.get(i));
+                    System.out.println("Xóa thành công");
+                } else {
+                    System.out.println("Tài khoản khách hàng không tồn tại");
+                }
             }
         }
-    }
 
+    }
 
 }

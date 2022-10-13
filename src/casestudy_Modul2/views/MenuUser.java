@@ -1,5 +1,6 @@
 package casestudy_Modul2.views;
 
+
 import casestudy_Modul2.Managers.ManagerUser;
 
 
@@ -9,6 +10,7 @@ public class MenuUser {
     public void menuUser() {
         Scanner sc = new Scanner(System.in);
         ManagerUser managerUser = new ManagerUser();
+
         while (true) {
             System.out.println();
             System.out.println();
@@ -94,8 +96,7 @@ public class MenuUser {
                         managerUser.forgotpassword();
                         break;
                     case 0:
-                        System.exit(0);
-                        break;
+                       return;
                 }
 
             } catch (Exception e) {

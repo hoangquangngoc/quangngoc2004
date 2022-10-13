@@ -9,8 +9,11 @@ import java.util.Scanner;
 
 public class ManagerProduct {
     File file = new File("D:\\intellij\\demo\\demo\\src\\casestudy_Modul2\\File_text\\product.txt");
+
     ReadAndWrite<Product>readAndWrite = new ReadAndWrite<>();
     ArrayList<Product>products = readAndWrite.read(file);
+
+
     Scanner sc = new Scanner(System.in);
 
 
@@ -21,6 +24,7 @@ public class ManagerProduct {
     }
     public void add(Product product){
         products.add(product);
+
         readAndWrite.write(file,products);
     }
     public int findIndexById(int id) {
@@ -74,13 +78,19 @@ public class ManagerProduct {
     }
     public void deleteProduct(){
         System.out.println("Nhập id sản phẩm muốn xóa");
-        System.out.println("Bạn có chắc chắn muốn xóa san phẩm này không");
+
         int idProduct = Integer.parseInt(sc.nextLine());
         for (int i = 0; i <products.size() ; i++) {
-            if (products.get(i).getIdProduct() == idProduct){
-                products.remove(i);
+            if (products.get(i).getIdProduct() == idProduct) {
+                System.out.println("Bạn có chắc chắn muốn xóa san phẩm này không (chọn y để xóa)");
+                String check = sc.nextLine();
+                if (check.equals("y") || check.equals("Y")) {
+                    products.remove(i);
+                    System.out.println("Xóa sản phẩm thành công");
+                } else {
+                    System.out.println("id sản phẩm này không tồn tại");
+                }
             }
-
         }
     }
     public void search(){
@@ -90,10 +100,12 @@ public class ManagerProduct {
            if (products.get(i).getNameCaterory().equals(nameCaterory)){
                System.out.println(products.get(i));
 
-            }
+             }
+
+           }
 
         }
 
 
     }
-}
+
