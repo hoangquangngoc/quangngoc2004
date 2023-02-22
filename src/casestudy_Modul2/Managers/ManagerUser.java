@@ -101,7 +101,7 @@ public class ManagerUser {
             System.out.println("-----------------------------------------");
             System.out.println("     Không tìm thấy tài khoản bạn cần tìm ");
         }
-      login();
+//      login();
     }
     public void buyProduct(){
         System.out.println("Nhập tên sản phẩm muốn thêm vào giỏ hàng");

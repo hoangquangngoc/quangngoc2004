@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ValidateUser {
- public static final String regexname = "[A-Za-z]+";
+ public static final String regexname = "[A-Z]+[a-z]+";
  public static final String regexage = "[0-9]{1,2}";
  public static final String regextelephone = "[+84][0-9]{11}";
  public static final String regexemail = "^[a-zA-Z]+[0-9_a-zA-z.]*@([a-z]+\\.[a-z]+)+";
@@ -16,6 +16,7 @@ public class ValidateUser {
 
  public static String name(){
   while (true){
+   System.out.println("Nhập tên bắt đầu bằng chữ in hoa");
    String Name = sc.nextLine();
    Pattern pattern = Pattern.compile(regexname);
    Matcher matcher = pattern.matcher(Name);
@@ -27,6 +28,7 @@ public class ValidateUser {
  }
  public static String age(){
   while (true){
+   System.out.println("tuổi phải nhập bằng chữ số");
    String Age = sc.nextLine();
    Pattern pattern = Pattern.compile(regexage);
    Matcher matcher= pattern.matcher(Age);
@@ -38,6 +40,7 @@ public class ValidateUser {
  }
  public static String telephone(){
   while (true){
+   System.out.println("Số diện thoại bắt đầu với +84");
    String Telephone = sc.nextLine();
    Pattern pattern = Pattern.compile(regextelephone);
    Matcher matcher = pattern.matcher(Telephone);
@@ -50,6 +53,7 @@ public class ValidateUser {
  }
  public static String email(){
   while (true){
+   System.out.println("Nhập email theo định dạng abc@gmail.com");
    String Email = sc.nextLine();
    Pattern pattern = Pattern.compile(regexemail);
    Matcher matcher = pattern.matcher(Email);
@@ -61,6 +65,7 @@ public class ValidateUser {
  }
  public static String username(){
   while (true){
+   System.out.println("tên tài khoản phải có đầy đủ cả chữ và số");
    String Username = sc.nextLine();
    Pattern pattern = Pattern.compile(regexusername);
    Matcher matcher = pattern.matcher(Username);

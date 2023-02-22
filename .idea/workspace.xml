@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2b7723c9-3681-4489-a0e7-b12aed4901a2" name="Changes" comment="case">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThiThucHanhModul2/IOStudent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThiThucHanhModul2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThiThucHanhModul2/ManagerSinhVien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThiThucHanhModul2/SinhVien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThiThucHanhModul2/file/student.scv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Managers/ManagerUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/casestudy_Modul2/views/MenuAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casestudy_Modul2/views/MenuAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/casestudy_Modul2/Validate/ValidateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/casestudy_Modul2/Validate/ValidateUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,22 +38,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/intellij/demo/Case&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/intellij/demo/demo",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\intellij\demo\Case\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="casestudy_Modul2.Main" />
       <module name="Case" />
@@ -63,9 +68,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThiThucHanhModul2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ThiThucHanhModul2.Main" />
+      <module name="Case" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ThiThucHanhModul2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ThiThucHanhModul2.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -85,7 +104,35 @@
       <option name="project" value="LOCAL" />
       <updated>1665546490684</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="case">
+      <created>1665581785609</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665581785609</updated>
+    </task>
+    <task id="LOCAL-00003" summary="case">
+      <created>1665634875278</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665634875278</updated>
+    </task>
+    <task id="LOCAL-00004" summary="case">
+      <created>1665634909158</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665634909158</updated>
+    </task>
+    <task id="LOCAL-00005" summary="case">
+      <created>1665642539356</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665642539356</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
